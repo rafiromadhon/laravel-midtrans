@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('donation', [DonationController::class, 'index']);
+Route::post('donation', [DonationController::class, 'store']);

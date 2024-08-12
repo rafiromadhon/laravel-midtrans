@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('donor_name')->nullable();
             $table->string('donor_email')->nullable();
-            $table->string('donor_type')->nullable();
+            $table->string('donation_type')->nullable();
             $table->decimal('amount', 20, 2)->default(0);
             $table->string('note')->nullable();
             $table->string('status')->default('pending');

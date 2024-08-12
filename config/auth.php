@@ -65,6 +65,11 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'donations' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Donation::class,
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
