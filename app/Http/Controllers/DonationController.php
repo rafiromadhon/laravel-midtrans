@@ -92,5 +92,6 @@ class DonationController extends Controller
                 $donation->setStatusFailed();
             }
         });
+        return;
     }
 }
