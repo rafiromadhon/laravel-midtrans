@@ -15,8 +15,14 @@ class DonationController extends Controller
         \Midtrans\Config::$isSanitized = config('services.midtrans.isSanitized');
         \Midtrans\Config::$is3ds = config('services.midtrans.is3ds');
     }
-    
+
     public function index()
+    {
+        $donations = Donation::orderBy('id', 'DESC')->paginate(8);
+        return view('welcome', compact('donations'));
+    }
+    
+    public function create()
     {
         return view('donation');
     }
